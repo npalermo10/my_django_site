@@ -5,7 +5,7 @@ from django.db.models import permalink
 from django.core.urlresolvers import reverse
 
 
-class Blog(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()
@@ -16,7 +16,7 @@ class Blog(models.Model):
         return '%s' % self.title
 
     def get_absolute_url(self):
-        return reverse('blog:view_blog_post', kwargs= { 'slug': self.slug })
+        return reverse('blog:view_blog_post', kwargs= {'slug': self.slug })
 
 
 class Category(models.Model):
