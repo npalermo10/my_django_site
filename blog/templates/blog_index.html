@@ -1,27 +1,58 @@
 {% extends 'base.html' %}
-{% block title %}My Blog{% endblock %}
+
+{% block background_img %}
+'http://i.imgur.com/68MyAEj.jpg'
+{% endblock background_img %}
+
+{% block style %}
+<style>
+  .square-background{
+  background-size: auto;
+  background-color: rgba(39, 174, 96,1.0);
+  vertical-align:top;
+  }
+
+  .text{
+  color:#ecf0f1;
+  }
+
+  .headings{
+  color:rgba(44, 62, 80,1.0);
+  margin: 40 10 -5 5;
+  }
+
+  th {
+  text-align: left;
+  }
+
+
+  .table{
+  margin: 0 0 0 0;
+  height: 100%;
+  border-collapse: collapse;
+  }
+
+  li a {
+  display: block;
+  width: 100%;
+  }
+
+  ul {
+  list-style-type: none;
+  margin: 10 0 -35 0;
+  padding: 0;
+  }
+
+</style>
+
+{% endblock style %}
 
 {% block content %}
-    <h2>Categories</h2>
-    {% if categories %}
-        <ul>
-        {% for category in categories %}
-            <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>There are no posts.</p>
-    {% endif %}
 
-    <h2>Posts</h2>
-    {% if posts %}
-        <ul>
-        {% for post in posts %}
-            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>There are no posts.</p>
-    {% endif %}
+<table class="table">
+  {% include 'categories_tab.html' %}
+  {% include 'view_post_pane.html' %}
+</table>
+
 
 {% endblock %}
