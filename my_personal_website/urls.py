@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name="home"),
     url(r'^blog/', include('blog.urls', namespace = "blog")),
+    url(r'^research/', include('current_research.urls', namespace = "research")),
 ]
