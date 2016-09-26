@@ -1,0 +1,36 @@
+<style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+
+</style>
+<container>
+<h2 class="text headings" >Categories</h2>
+{% if categories %}
+<ul class="ul">
+  {% for category in categories %}
+  <li><a class="text" href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no posts.</p>
+{% endif %}
+<h2 class="text headings">Recent posts</h2>
+{% if posts %}
+<ul class="ul">
+  {% for post in posts %}
+  {% if post.recent_post %}
+  <li><a class = "text" href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no posts.</p>
+{% endif %}
+</

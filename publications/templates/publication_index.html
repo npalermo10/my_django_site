@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+
+ .bg{
+     background-size: cover;
+     background-color: #34495e;
+     font-family:Verdana;
+ }
+
+ h3{
+     padding: 10 0 0 0;
+     margin: 0 0 0 10;
+ }
+
+ p{
+     
+     margin: 10 10% 15 5%;
+     text-align:justify
+ }
+
+</style>
+
+{% endblock style %}
+
+{% block content %}
+
+<body class="bg">
+    <h3>
+        Publications
+
+    </h3>
+
+    {% for item in publications %}
+    <p style="font-style:italic;">
+        {{ item.citation }} 
+    </p>
+    {% endfor %}
+
+
+    <h3>
+        Awards Recieved
+    </h3>
+	
+        {% for item in awards %}
+        <p>
+            {{ item.description }} , {{ item.date }}
+        </p>
+        {% endfor %}
+    
+</body>
+
+{% endblock content %}
