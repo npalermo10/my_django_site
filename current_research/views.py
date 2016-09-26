@@ -1,4 +1,4 @@
-from .models import Curr_research
+from .models import Curr_research, Category
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import loader
 

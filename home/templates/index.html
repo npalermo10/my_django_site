@@ -4,53 +4,57 @@
 
 <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
-  .main_banner{
-  margin:8%;
-  position:fixed;
-  }
+ .bg {
+     background:linear-gradient( rgba(30, 0, 0, 0.25), rgba(30, 0, 0, 0.25) ),url('http://i.imgur.com/smzwbOa.jpg');
+     background-size:cover;
+     color:#ecf0f1;
+ }
 
-  .profile_pic{
-  height:350px;
-  margin:0px 0px 10px 0px;
-  border-radius:5px;
-  filter: brightness(98%);
-  }
+ .main_banner{
+     margin:8%;
+     position:fixed;
+ }
 
-  .text{
-  color:#2c3e50;
-  }
+ .profile_pic{
+     height:350px;
+     margin:0px 0px 10px 0px;
+     border-radius:5px;
+     filter: brightness(98%);
+ }
 
-  .square-background{
- 
-  background-size: auto;
-  background-color: #ecf0f1;
-  padding: 20;
-  border-radius:5px;
-  }
+ .text{
+ font-family: Verdana;
+     color:#2c3e50;
+ }
 
-  * {
-  margin: 0;
-  padding: 0;
-  }
+ .square-background{
+     background-size: auto;
+     background-color: #ecf0f1;
+     padding: 20;
+     border-radius:5px;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+ }
 
 
 </style>
 {% endblock style %}
 
-{% block background_img %}
-'http://i.imgur.com/smzwbOa.jpg'
-{% endblock background_img %}
-
 {% block content %}
-<div class="main_banner">
-  <center>
-    <div class="square-background">
+<body class ="bg">
+    <div class="main_banner">
+        <center>
+            <div class="square-background">
 
-      <img class="profile_pic" src = "https://scontent-mia1-2.xx.fbcdn.net/v/t1.0-9/561793_10151058165581567_664524530_n.jpg?oh=022295195bfc4cd5f44b55b7d6fc08bb&oe=5846281A" alt = "My profile image">
+                <img class="profile_pic" src = "https://scontent-mia1-2.xx.fbcdn.net/v/t1.0-9/561793_10151058165581567_664524530_n.jpg?oh=022295195bfc4cd5f44b55b7d6fc08bb&oe=5846281A" alt = "My profile image">
 
-      <h1 class="text" style='letter-spacing:1px'>Nicholas Palermo</h1>
-      <p class="text"> PhD. Candidate of Biological Sciences <br> Honeybee Researcher at Florida International University <br> Email: npale005@fiu.edu</p>
+                <h1 class="text" style='letter-spacing:1px'>Nicholas Palermo</h1>
+                <p class="text"> PhD. Candidate of Biological Sciences <br> Honeybee Researcher at Florida International University <br> Email: npale005@fiu.edu</p>
+            </div>
+        </center>
     </div>
-  </center>
-</div>
+</body>
 {% endblock content %}

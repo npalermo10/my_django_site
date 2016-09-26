@@ -9,19 +9,23 @@
          margin:0;
          padding:0;
      }
+     .movedown{
+         margin: 30 0 0 0
+     }
     </style>
 
     <head>
         <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/bugs-and-insects/100/07-512.png">
 	<title>Nicholas Palermo</title>
         {% block style %}
-        {% endblock %}
+        {% endblock style %}
     </head>
 
-    <body class='bg'>
-        {% include 'navbar.html' %}
+
+    {% include 'navbar.html' %}
+    <div class="movedown">
         {% block content %}
         {% endblock %}
-    </body>
+    </div>
 
 </html>

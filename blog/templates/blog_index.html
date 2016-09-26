@@ -1,58 +1,61 @@
 {% extends 'base.html' %}
 
-{% block background_img %}
-'http://i.imgur.com/68MyAEj.jpg'
-{% endblock background_img %}
-
 {% block style %}
 <style>
-  .square-background{
-  background-size: auto;
-  background-color: rgba(39, 174, 96,1.0);
-  vertical-align:top;
-  }
+ .bg {
+     background:linear-gradient( rgba(30, 0, 0, 0.25), rgba(30, 0, 0, 0.25) ),url('http://i.imgur.com/68MyAEj.jpg');
+     background-size:cover;
+     color:#ecf0f1;
+ }
 
-  .text{
-  color:#ecf0f1;
-  }
+ .square-background{
+     background-size: auto;
+     background-color: rgba(39, 174, 96,1.0);
+     vertical-align:top;
+ }
 
-  .headings{
-  color:rgba(44, 62, 80,1.0);
-  margin: 40 10 -5 5;
-  }
+ .text{
+ font-family:Verdana;
+     color:#ecf0f1;
+ }
 
-  th {
-  text-align: left;
-  }
+ .headings{
+     color:rgba(44, 62, 80,1.0);
+     margin: 40 10 -5 5;
+ }
+
+ th {
+     text-align: left;
+ }
 
 
-  .table{
-  margin: 0 0 0 0;
-  height: 100%;
-  border-collapse: collapse;
-  }
+ .table{
+     margin: 0 0 0 0;
+     height: 100%;
+     border-collapse: collapse;
+ }
 
-  li a {
-  display: block;
-  width: 100%;
-  }
+ li a {
+     display: block;
+     width: 100%;
+ }
 
-  ul {
-  list-style-type: none;
-  margin: 10 0 -35 0;
-  padding: 0;
-  }
+ ul {
+     list-style-type: none;
+     margin: 10 0 -35 0;
+     padding: 0;
+ }
 
 </style>
 
 {% endblock style %}
 
 {% block content %}
-
-<table class="table">
-  {% include 'categories_tab.html' %}
-  {% include 'view_post_pane.html' %}
-</table>
-
+<body class="bg">
+    <table class="table">
+        {% include 'categories_tab.html' %}
+        {% include 'view_post_pane.html' %}
+    </table>
+</body>
 
 {% endblock %}

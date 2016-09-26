@@ -17,10 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from home import views
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name="home"),
     url(r'^blog/', include('blog.urls', namespace = "blog")),
-    url(r'^research/', include('current_research.urls', namespace = "research")),
+    url(r'^current_research/', include('current_research.urls', namespace = "current_research")),
+    url(r'^publications/', include('publications.urls', namespace = "publications")),
+    url(r'^classes/', include('teaching.urls', namespace = "teaching")),
 ]
