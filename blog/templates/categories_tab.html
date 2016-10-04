@@ -4,7 +4,7 @@
         {% if categories %}
         <ul class="ul">
             {% for category in categories %}
-            <li><a class="text" style="margin:0 0 0 0" href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+            <li><a style="margin:0 0 0 0" href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
             {% endfor %}
         </ul>
         {% else %}
@@ -17,7 +17,7 @@
         <ul class="ul">
             {% for post in posts %}
             {% if post.recent_post %}
-            <li><a class = "text" style="margin:0 0 0 0" href="{{ post.get_absolute_url }}">{{ post.title }}
+            <li><a style="margin:0 0 0 0" href="{{ post.get_absolute_url }}">{{ post.title }}
                 <div style = "font-size:x-small">
                     {{post.posted|timesince}}
                 </div>
