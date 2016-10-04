@@ -1,14 +1,14 @@
 from django.contrib import admin
-from blog.models import Classroom, Announcements,Scheduled
+from teaching.models import Classroom, Announcement,Scheduled
 
 class ClassroomAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('title',)}
 
-class AnnouncementsAdmin(admin.ModelAdmin):
+class AnnouncementAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('date', 'classroom')}
     
 # Register your models here.
 admin.site.register(Classroom)
-admin.site.register(Announcements)
+admin.site.register(Announcement)
 admin.site.register(Scheduled)
 

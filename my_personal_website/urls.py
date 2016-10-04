@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from home import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +26,7 @@ urlpatterns = [
     url(r'^current_research/', include('current_research.urls', namespace = "current_research")),
     url(r'^publications/', include('publications.urls', namespace = "publications")),
     url(r'^classes/', include('teaching.urls', namespace = "teaching")),
-]
+    ]
+
+# if settings.DEBUG:
+    # urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
