@@ -1,38 +1,10 @@
 {% extends 'base.html' %}
 
 {% block style %}
-<style>
-
- .bg{
-     background-size: cover;
-     background-color: #34495e;
-     font-family:Verdana;
- }
-
- h3{
-     padding: 10 0 0 0;
-     margin: 0 0 0 10;
- }
-
- h4{
-     margin: 10 10% 15 3%;
-     text-align:justify;
- }
-
- p{
-     margin: 10 10% 15 3%;
-     text-align:justify;
- }
-
- th{
-     padding:5 20 0 5;
- }
-</style>
-
+<link rel="stylesheet" href="/static/css/classroom_index.css">
 {% endblock style %}
 
 {% block content %}
-
 <body class="bg">
     <h3>{{classroom.title}} ({{classroom.semester}} {{classroom.year}})
 
@@ -40,7 +12,7 @@
 
     <div>
 	<h4>Announcements:</h4>
-	<p style="background-color:#1abc9c; color:#2c3e50; padding:5">
+	<p class="announcements">
 	    
 	    {% for item in announcement %}
 	    {{item.date}} - {{ item.body }}

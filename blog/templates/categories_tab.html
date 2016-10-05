@@ -17,10 +17,8 @@
         <ul class="ul">
             {% for post in posts %}
             {% if post.recent_post %}
-            <li><a style="margin:0 0 0 0" href="{{ post.get_absolute_url }}">{{ post.title }}
-                <div style = "font-size:x-small">
-                    {{post.posted|timesince}}
-                </div>
+            <li><a style="margin:0 0 0 0" href="{{ post.get_absolute_url }}">{{ post.title|truncatechars:20 }} - {{post.posted|date:"SHORT_DATE_FORMAT"}}
+                
             </a></li>
             {% endif %}
             {% endfor %}
