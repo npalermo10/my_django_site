@@ -1,0 +1,19 @@
+.new_bg{
+    background-size: cover;
+    background-color: #34495e;
+    color:#ecf0f1;
+}
+
+h3{
+    padding: 10 0 0 0;
+    margin: 0 0 0 10;
+}
+
+p{
+    margin: 10 10% 15 5%;
+    text-align:justify;
+}
+
+.pubs{
+    font-style:italic;
+}

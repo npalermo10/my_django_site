@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+
+ .bg{
+     background-size: cover;
+     background-color: #bdc3c7;
+     font-family:Verdana;
+ }
+
+ h3{
+     padding: 10 0 0 0;
+     margin: 0 0 0 10;
+ }
+
+ p{
+     margin: -5 0 0 6%;
+ 
+ }
+
+ .class_links{
+     text-align:justify
+
+ }
+</style>
+
+{% endblock style %}
+
+{% block content %}
+
+<body class="bg">
+    <h3>Classes
+
+    </h3>
+
+    {% for class in classrooms %}
+    <a href="{{ class.get_absolute_url }}" class="class_links">
+        <p>{{ class.title }} ({{class.semester}}, {{class.year}})</p>
+    </a>
+    {% endfor %}
+
+    
+</body>
+
+{% endblock content %}

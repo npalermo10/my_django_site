@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+
+ .bg{
+     background-size: cover;
+     background-color: #34495e;
+     font-family:Verdana;
+ }
+
+ h3{
+     padding: 10 0 0 0;
+     margin: 0 0 0 10;
+ }
+
+ p{
+     
+     margin: 10 10% 15 5%;
+     text-align:justify
+ }
+
+</style>
+
+{% endblock style %}
+
+{% block content %}
+
+<body class="bg">
+    <h3>Classes
+
+    </h3>
+
+    {% for class in classrooms %}
+    <a href="{{ class.get_absolute_url }}">
+        {{ class.title }} ({{ class.year}})	
+    </a>
+    {% endfor %}
+
+    
+</body>
+
+{% endblock content %}

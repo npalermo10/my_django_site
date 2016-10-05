@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/css/classroom_index.css">
+{% endblock style %}
+
+{% block content %}
+<body class="bg">
+    <h3>{{classroom.title}} ({{classroom.semester}} {{classroom.year}})
+
+    </h3>
+
+    <div>
+	<h4>Announcements:</h4>
+	<p class="announcements">
+	    
+	    {% for item in announcement %}
+	    {{item.date}} - {{ item.body }}
+	    {% endfor %}
+	</p>
+
+	<h4>Schedule</h4>
+	<table style="background-color:#7f8c8d; margin:10 0 0 3%">
+	    <tr>
+		<th> Week of: </th>
+		<th> Assignment </th>
+		<th> Downloads </th>
+	    </tr>
+	    {% for item in scheduled %}
+	    <tr>
+		<th>{{item.date}}</th>
+		<th>{{item.title}}</th>
+		<th></th>
+	    </tr>
+	    {% endfor %}
+	</table>
+
+    </div>
+
+</body>
+
+{% endblock content %}

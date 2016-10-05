@@ -1,28 +1,13 @@
 <html>
-    <style>
-     .bg {
-         background:linear-gradient( rgba(30, 0, 0, 0.25), rgba(30, 0, 0, 0.25) ),url({% block background_img %}{% endblock background_img %});
-         background-size:cover;
-         color:#ecf0f1;
-     }
-     *{
-         margin:0;
-         padding:0;
-     }
-     .movedown{
-         margin: 30 0 0 0
-     }
-    </style>
-
+  <link rel="stylesheet" href="/static/css/base.css">
     <head>
         <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/bugs-and-insects/100/07-512.png">
 	<title>Nicholas Palermo</title>
         {% block style %}
         {% endblock style %}
     </head>
-
-
-    {% include 'navbar.html' %}
+      {% include 'navbar.html' %}
+        
     <div class="movedown">
         {% block content %}
         {% endblock %}
