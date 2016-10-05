@@ -1,0 +1,35 @@
+.bg{
+    background-size: cover;
+    background-color: #34495e;
+    font-family:Verdana;
+}
+
+h3{
+    padding: 10 0 0 0;
+    margin: 0 0 0 10;
+}
+
+h4{
+    margin: 10 10% 15 3%;
+    text-align:justify;
+}
+
+p{
+    margin: 10 10% 15 3%;
+    text-align:justify;
+}
+
+th{
+    padding:5 20 0 5;
+}
+
+.announcements{
+    background-color:#1abc9c;
+    color: #2c3e50;
+    padding:5
+}
+
+.schedule{
+    background-color:#7f8c8d;
+    margin:10 0 0 3%
+}
