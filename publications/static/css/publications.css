@@ -1,11 +1,9 @@
-.new_bg{
-    background-size: cover;
-    background-color: #34495e;
-    color:#ecf0f1;
+.bg{
+    background-color:#bdc3c7;
 }
 
 h3{
-    padding: 10 0 0 0;
+    padding: 10 0 0 2%;
     margin: 0 0 0 10;
 }
 

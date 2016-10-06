@@ -1,0 +1,20 @@
+.entire_post{
+    vertical-align:top;
+
+}
+
+.post_title{
+    margin: 5% 0 0% 5%;
+    
+}
+
+.post_body{
+    color:rgba(52, 73, 94,1.0);
+    margin:0 5% 0 10%;
+}
+
+.post_date{
+    font-size:small;
+    color:rgba(52, 73, 94,.8);
+    margin:0 0 0 60%;
+}

@@ -1,14 +1,10 @@
-.bg {
-    background:linear-gradient( rgba(30, 0, 0, 0.25), rgba(30, 0, 0, 0.25) ),url({% block background_img %}{% endblock background_img %});
-    background-size:cover;
-    }
 *{
     margin:0;
     padding:0;
 }
 
 .movedown{
-    padding: 30 0 0 0
+    padding: 30 0 0 0;
 }
 
 .text{

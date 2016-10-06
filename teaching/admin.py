@@ -11,4 +11,3 @@ class AnnouncementAdmin(admin.ModelAdmin):
 admin.site.register(Classroom)
 admin.site.register(Announcement)
 admin.site.register(Scheduled)
-

@@ -9,6 +9,7 @@ class Classroom(models.Model):
     title = models.TextField(max_length= 100, unique=True)
     year = models.IntegerField(default = datetime.now().year)
     semester = models.TextField(max_length=20)
+    syllabus = models.FileField(upload_to='uploads/teaching/syllabus/', blank=True)
     slug= models.TextField(max_length=20)
     
     def __unicode__(self):

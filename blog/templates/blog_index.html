@@ -3,14 +3,16 @@
 {% block style %}
 <link rel="stylesheet" href="/static/css/blog_index.css">
 <link rel="stylesheet" href="/static/css/categories_tab.css">
-
+<link rel="stylesheet" href="/static/css/view_post_pane.css">
 {% endblock style %}
 
 {% block content %}
 <body class="bg">
     <table class="table">
-        {% include 'categories_tab.html' %}
+      {% include 'categories_tab.html' %}
+      <th>
         {% include 'view_post_pane.html' %}
+	</th>
     </table>
 </body>
 

@@ -1,13 +1,12 @@
 .bg{
     background-size: cover;
-    background-color: #34495e;
+    background-color: #bdc3c7;
     font-family:Verdana;
 }
 
 h3{
-    padding: 10 0 0 0;
-    margin: 0 0 0 10;
-}
+    margin: 10 10% 15 3%;
+  }
 
 h4{
     margin: 10 10% 15 3%;
@@ -30,6 +29,10 @@ th{
 }
 
 .schedule{
-    background-color:#7f8c8d;
-    margin:10 0 0 3%
+   margin:4% 0 0 12%
 }
+
+.syllabus{
+    margin:0 0 0 4%
+}
+
