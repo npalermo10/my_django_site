@@ -1,7 +1,6 @@
 from .models import Classroom, Announcement, Scheduled
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import loader
-import pdb
 
 # Create your views here.
 def teaching_index(request):
@@ -16,4 +15,4 @@ def view_classroom(request, slug):
         'scheduled':Scheduled.objects.all().filter(slug__slug=slug).order_by("-date"),
             }
     )
-    pdb.set_trace()
+

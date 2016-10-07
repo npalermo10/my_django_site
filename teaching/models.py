@@ -35,9 +35,4 @@ class Scheduled(models.Model):
     def __unicode__(self):
         return "{}-{}".format(self.date,self.title)
     
-# class Document(models.Model):
-#     classroom = models.ForeignKey('teaching.Scheduled')
-#     upload_location = "uploads/" + classroom + "/%Y/"
-#     upload = models.FileField(upload_to=upload_location)
-#     date = models.ForeignKey('teaching.Scheduled') 
     

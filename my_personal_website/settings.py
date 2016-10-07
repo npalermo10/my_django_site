@@ -36,12 +36,16 @@ INSTALLED_APPS = [
     'current_research.apps.CurrentResearchConfig',
     'publications.apps.PublicationsConfig',
     'teaching.apps.TeachingConfig',
+    'gallery.apps.GalleryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'photologue',
+    'sortedm2m',
     ]
 
 MIDDLEWARE_CLASSES = [
@@ -57,10 +61,12 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'my_personal_website.urls'
 
+from photologue import PHOTOLOGUE_APP_DIR
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [PHOTOLOGUE_APP_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,6 +79,8 @@ TEMPLATES = [
     },
 ]
 
+
+    
 WSGI_APPLICATION = 'my_personal_website.wsgi.application'
 
 
@@ -119,7 +127,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 

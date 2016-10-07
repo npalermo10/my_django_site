@@ -15,10 +15,10 @@
         <p class="announcements">
 
             {% for item in announcement %}
-            {{item.date}} - {{ item.body }}
+            {{item.date|date:"SHORT_DATE_FORMAT"}} - {{ item.body }}
             {% endfor %}
         </p>
-        <a class="syllabus" href="{{classroom.syllabus.url}}"> Class syllabus </a>
+        <a class="syllabus" href="{{classroom.syllabus.url}}"> download syllabus </a>
         <table class="schedule">
             <tr>
                 <th> Week of: </th>
@@ -27,7 +27,7 @@
             </tr>
             {% for item in scheduled %}
             <tr>
-                <th>{{item.date}}</th>
+                <th>{{item.date|date:"SHORT_DATE_FORMAT"}}</th>
                 <th>{{item.title}}</th>
                 <th></th>
             </tr>

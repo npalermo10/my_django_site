@@ -2,19 +2,21 @@
     background-size: cover;
     background-color: #bdc3c7;
     font-family:Verdana;
+    color:#2c3e50;
+    margin:0 0 0 3%
 }
 
 h3{
-    margin: 10 10% 15 3%;
-  }
+    margin: 10 10% 15 0%;
+}
 
 h4{
-    margin: 10 10% 15 3%;
+    margin: 10 10% 15 0%;
     text-align:justify;
 }
 
 p{
-    margin: 10 10% 15 3%;
+    margin: 10 10% 15 0%;
     text-align:justify;
 }
 
@@ -29,10 +31,12 @@ th{
 }
 
 .schedule{
-   margin:4% 0 0 12%
+    
 }
 
 .syllabus{
-    margin:0 0 0 4%
+   color:RoyalBlue;
 }
 
+.syllabus:hover{
+  }
