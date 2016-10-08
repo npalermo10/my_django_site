@@ -26,8 +26,8 @@ urlpatterns = [
     url(r'^current_research/', include('current_research.urls', namespace = "current_research")),
     url(r'^publications/', include('publications.urls', namespace = "publications")),
     url(r'^classes/', include('teaching.urls', namespace = "teaching")),
-    url(r'^gallery/', include('gallery.urls', namespace = "gallery")),
-    url(r'^photos/', include('photologue.urls', namespace='photologue')),
+    url(r'^photos/', include('photologue_custom.urls', namespace='photologue_custom')),
+    url(r'^photologue/', include('photologue.urls', namespace='photologue')),
     ]
 
 if settings.DEBUG:

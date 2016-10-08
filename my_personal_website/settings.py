@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'publications.apps.PublicationsConfig',
     'teaching.apps.TeachingConfig',
     'gallery.apps.GalleryConfig',
+    'photologue_custom.apps.PhotologueCustomConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
