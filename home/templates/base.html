@@ -1,16 +1,18 @@
 <html>
-  <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/base.css">
     <head>
-        <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/bugs-and-insects/100/07-512.png">
-	<title>Nicholas Palermo</title>
+        <link rel="icon" href="/media/pictures/ttlogo.png">
+        <title>traumaTank</title>
         {% block style %}
         {% endblock style %}
     </head>
-      {% include 'navbar.html' %}
-        
-    <div class="movedown">
-        {% block content %}
-        {% endblock %}
+    {% include 'navbar.html' %}
+
+    <div class="mainpage"
+        <body class="bg">
+            {% block content %}
+            {% endblock %}
+        </body>
     </div>
 
 </html>

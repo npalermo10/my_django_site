@@ -1,57 +1,22 @@
-<style>
-  .banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(236, 240, 241,1.0);
-  width: 100%;
-  }
-  
-  .banner-content {
-  width: 1000px;
-  margin: 0px 0px 0px 0px ;
-  padding: 7px 0px 7px 0px ;
-  }
+<head>
+  <link rel="stylesheet" href="/static/css/navbar.css">
+</head>
 
-  .bee_icon{
-  height:35px;
-  filter: brightness(100%);
-  margin: -10px 0px -9px 4px;
-  }
-
-   .bee_icon:hover{
-  height:35px;
-  filter: brightness(150%) opacity(.5);
-  margin: -10px 0px -9px 4px;
-  }
-
-   a{
-  font-family:Arial;
-  color:rgba(44, 62, 80,1.0);
-  text-decoration:none;
-  margin:7px 10px 7px 0px;
-  padding:7px 7px 7px 7px;
-  }
-
-  a:hover{
-  font-family:Arial;
-  color:rgba(170, 160, 240, 1)	;
-  margin:7px 10px 7px 0px;
-  padding:7px 7px 7px 7px;
-  border-radius:3%
-  }
-</style>
-
-<div class="banner">
-  <div class="banner-content">
-    <a target ="" href ="{% url 'home' %}">
-      <img class="bee_icon" src="https://cdn1.iconfinder.com/data/icons/bugs-and-insects/100/07-512.png" alt="honeybee icon">
-    </a>
-    <a target="" href ="{% url 'current_research:view_research_index' %}">Current Research</a>
-    <a target="" href ="{% url 'blog:view_blog_index' %}">Blog</a>
-    <a target="" href ="{% url 'publications:view_publication_index' %}">Publications & Awards</a>
-    <a target="" href ="{% url 'teaching:view_teaching_index' %}">Teaching</a>
-    <a target="" href ="{% url 'photologue_custom:view_gallery_index' %}" >Photo Gallery</a>
-    <a target="" href ="http://github.com/npalermo10">GitHub </a>
+<body>
+  <div class="banner">
+    <div class="banner-content">
+      <a target ="" href ="{% url 'home' %}">
+        <img class="tt_icon" src="/media/pictures/ttlogo.png" alt="homepage">
+      </a>
+      <div class ="banner-links-text">
+        <a class="navbar_a" target="" href ="{% url 'blog:view_blog_index' %}">blog</a>
+        <a class="navbar_a" target="" href ="{% url 'current_research:view_research_index' %}">current research</a>
+        <a class="navbar_a" target="" href ="{% url 'publications:view_publication_index' %}">publications & awards</a>
+        <a class="navbar_a" target="" href ="{% url 'teaching:view_teaching_index' %}">teaching</a>
+        <a class="navbar_a" target="" href ="{% url 'photologue_custom:view_gallery_index' %}" >photo gallery</a>
+        <a class="navbar_a" target="_blank" href ="https://soundcloud.com/traumatank" >music</a>
+        <a class="navbar_a" target="_blank" href ="http://github.com/npalermo10">GitHub </a>
+      </div>
+    </div>
   </div>
-</div>
+</body>

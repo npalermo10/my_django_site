@@ -1,21 +1,40 @@
-.bg{
-    background-color:#bdc3c7;
-}
+.home_img{
+    max-width: 1160px;
+ }
 
-.main_banner{
-    position:fixed;
-    margin: 5% 0 0 5%
-}
-
-.profile_pic{
-    height:350px;
-    margin:0px 0px 10px 0px;
-    border-radius:5px;
-    filter: brightness(98%);
-}
 
 .square-background{
     background-size: auto;
     padding: 20;
     border-radius:5px;
+}
+
+.heading1 {
+    background: rgba(236, 240, 241,1);
+    font-size: 40px;
+    padding: 12px 25px;
+    position: absolute;
+    z-index:2;
+    width: 25%;
+    left: 15%;
+    font-family: 'main_font';
+    color:rgba(52, 152, 219,1.0);
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.heading2 {
+    text-align:right;
+    border-top: 1px solid #95a5a6;
+    font-size: 14px;
+    font-family:'navbar_font';
+    padding:2px;
+    padding-right:10px;
+    color:#95a5a6;
+    letter-spacing:1px;
+}
+
+.heading2_a {
+    color:#95a5a6;
+    text-decoration:underline;
 }

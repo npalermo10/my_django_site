@@ -4,12 +4,12 @@
             {{  latest_post.title }}
 
         </h2>
-        <p  class="post_body">
-            {{ latest_post.body }}
-        </p>
-        <p class="post_date" >
+        <div  class="post_body">
+            {{ latest_post.body|linebreaks }}
+        </div>
+        <div class="pane_post_date" >
             {{  latest_post.posted }} -
-            {{ latest_post.category }}
-        </p>
+            {{ latest_post.category|lower }}
+        </div>
     </div>
 

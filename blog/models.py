@@ -1,17 +1,22 @@
-from __future__ import unicode_literals
 
+from __future__ import unicode_literals
 from django.db import models
 from django.db.models import permalink
 from django.core.urlresolvers import reverse
 from datetime import timedelta, date
 
 class Post(models.Model):
+
+    # def get_image_path(instance, filename):
+        # return os.path.join('pictures', str(instance.id), filename)
+
+    image = models.ImageField(upload_to="pictures/blog_pics", blank=True, null=True)
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()
     posted = models.DateField(db_index=True, auto_now_add=True)
     category = models.ForeignKey('blog.Category')
-
+  
     def __unicode__(self):
         return '%s' % self.title
 
@@ -23,6 +28,7 @@ class Post(models.Model):
             return True
         else:
             return False
+
     
 class Category(models.Model):
     title = models.CharField(max_length=100, db_index=True)

@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'navbar_font'; /*a name to be used later*/
+    src: url("../fonts/IczWvq5y_Cwwv_rBjOtT0w.woff") format('woff');
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(236, 240, 241,1.0);
+    width: 100%;
+    z-index:99;
+    border-bottom: 1px solid rgba(52, 152, 219,0.1);
+       
+}
+
+.banner-content {
+    max-width: 1170px;
+    margin-right: auto ;
+    margin-left:auto;
+    padding-right: 15px ;
+    padding-left: 15px ;
+    border-bottom: 1px solid rgba(52, 152, 219,0.2);
+}
+
+.tt_icon{
+    float:left;
+    height:100px;
+    padding:10px;
+    filter: brightness(100%);
+    transition: all 200ms linear;
+}
+
+.tt_icon:hover{
+    filter: brightness(150%) opacity(.5);
+}
+
+.banner-links-text{
+    float:right;
+    border-bottom: 1px solid #95a5a6;
+    margin: 20px;
+    padding: 10px 0px 10px 0px;
+    letter-spacing:1px;
+
+}
+
+.navbar_a{
+    font-family: 'navbar_font';
+    font-weight:bold;
+    color:#95a5a6;
+    font-size: 14px;
+    text-transform:uppercase;
+    margin:auto;
+    padding:10px;
+    transition: all 200ms linear;
+}
+
+.navbar_a:hover{
+    color:rgba(52, 152, 219,1.0);
+    border-bottom: 4px solid #95a5a6;
+}

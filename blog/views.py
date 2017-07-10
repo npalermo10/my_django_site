@@ -3,11 +3,17 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import loader
 
 def blog_index(request):
-    latest_post = Post.objects.latest("posted")
+    recent_posts = Post.objects.all().order_by("posted")[:11]
+    latest_post = recent_posts.reverse()[0]
+    second_latest_post = recent_posts.reverse()[1]
+    older_posts = recent_posts.reverse()[2:8]
+    older_posts_grouped = zip(*[iter(older_posts)]*3)
+    
     return render_to_response('blog_index.html', {
         'categories': Category.objects.all(),
-        'posts': Post.objects.all()[:5],
-        'latest_post': latest_post
+        'latest_post': latest_post,
+        'second_latest_post': second_latest_post,
+        'older_posts_grouped': older_posts_grouped,
         })
 
 def view_post(request, slug):
