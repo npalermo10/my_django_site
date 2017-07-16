@@ -10,12 +10,10 @@
 
 .mainpage{
     margin-top: 125;
-    padding-left: 15px;
-    padding-right: 15px;
     max-width:1170;
-    margin-right:auto;
-    margin-left:auto;
-
+    margin-right:200px;
+    margin-left:200px;
+   
 }
 
 .text{
@@ -24,10 +22,9 @@
 }
 
 .bg{
-     background-color:rgba(236, 240, 241,1.0);
-     background-size:cover;
-     width:1170;
-}
+    background-color:rgba(236, 240, 241,1.0);
+    background-size:cover;
+  }
 
 a{
   color:rgba(44, 62, 80,1.0);
