@@ -4,26 +4,28 @@
 {% block title %}{% trans "All galleries" %}{% endblock %}
 
 {% block content %}
-    <div class="row col-lg-12">
-        <h3 class="page-header">{% trans "Galleries" %}</h3>
-    </div>
+<body class="bg">
+  <div class="row col-lg-12">
+    <h3 class="page-header">{% trans "Galleries" %}</h3>
+  </div>
 
-    {% if object_list %}
-    {% for gallery in object_list %}
-    <div class="row col-lg-12 gallery_names">
-        <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
-        <p class="muted"><small>{% trans "Published" %} {{ gallery.date_added }}</small></p>
-        {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
-        {% for photo in gallery.sample %}
-        <a href="{{ photo.get_absolute_url }}">
-            <img src="{{ photo.get_thumbnail_url }}" class="thumbnail" alt="{{ photo.title }}">
-        </a>
-        {% endfor %}
-    </div>
+  {% if object_list %}
+  {% for gallery in object_list %}
+  <div class="row col-lg-12 gallery_names">
+    <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
+    <p class="muted"><small>{% trans "Published" %} {{ gallery.date_added }}</small></p>
+    {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
+    {% for photo in gallery.sample %}
+    <a href="{{ photo.get_absolute_url }}">
+      <img src="{{ photo.get_thumbnail_url }}" class="thumbnail" alt="{{ photo.title }}">
+    </a>
     {% endfor %}
-    {% else %}
-    <div class="row col-lg-12">{% trans "No galleries were found" %}.</div>
-    {% endif %}
+  </div>
+  {% endfor %}
+  {% else %}
+  <div class="row col-lg-12">{% trans "No galleries were found" %}.</div>
+  {% endif %}
 
-    {% include "photologue/includes/paginator.html" %}
+  {% include "photologue/includes/paginator.html" %}
+</body>
 {% endblock %}

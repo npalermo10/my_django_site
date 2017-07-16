@@ -1,25 +1,24 @@
-<table class="preview_table second_table">
-  {% for group in older_posts_grouped %}
-  <tr>
-    {% for post in group %}
-    <td class = "post" background= {% if post.image %} {{post.image.url}} {% else %} "/media/pictures/ttlogo.png" {% endif %}>
-      <a href="{{ post.get_absolute_url }}">
-        <div class="post_heading second_post_heading">
-          <div class="heading_text">
-            <div class="category">
-              {{ post.category }}
-            </div>
-            <div class="post_title">
-              {{ post.title }}
-            </div>
-            <div class="date_posted">
-              {{ post.posted }}
-            </div>
+{% for group in older_posts_grouped %}
+<div class="older_preview">
+  {% for post in group %}
+  <div class = "post older_post">
+    <a href="{{ post.get_absolute_url }}">
+      <img itemprop="image" class="post_image" src="{% if post.image %} {{post.image.url}} {% else %} /media/pictures/ttlogo.png {% endif %}">
+      <div class="post_heading">
+        <div class="heading_text">
+          <div class="category">
+            {{ post.category }}
+          </div>
+          <div class="post_title">
+            {{ post.title }}
+          </div>
+          <div class="date_posted">
+            {{ post.posted }}
           </div>
         </div>
-      </a>
-    </td>
-     {% endfor %}
-  </tr>
+      </div>
+    </a>
+  </div>
   {% endfor %}
-</table>
+</div>
+{% endfor %}

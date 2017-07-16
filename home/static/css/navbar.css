@@ -8,16 +8,15 @@
     top: 0;
     left: 0;
     background-color: rgba(236, 240, 241,1.0);
-    width: 100%;
     z-index:99;
     border-bottom: 1px solid rgba(52, 152, 219,0.1);
-       
+    width:100%;   
 }
 
 .banner-content {
     max-width: 1170px;
     margin-right: auto ;
-    margin-left:auto;
+    margin-left:100px;
     padding-right: 15px ;
     padding-left: 15px ;
     border-bottom: 1px solid rgba(52, 152, 219,0.2);

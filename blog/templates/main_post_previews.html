@@ -1,39 +1,40 @@
-<table class="preview_table main_table">
-  <tr>
-    <td class = "post main_post" background={% if latest_post.image %} {{latest_post.image.url}} {% else %} "/media/pictures/ttlogo.png" {% endif %}>
-      <a href="{{ latest_post.get_absolute_url }}">
-        <div class="post_heading">
-          <div class="heading_text">
-            <div class="category">
-              {{ latest_post.category }}
-            </div>
-            <div class="post_title">
-              {{ latest_post.title }}
-            </div>
-            <div class="date_posted">
-              {{ latest_post.posted }}
-            </div>
+<div class="main_preview">
+  <div class = "post main_post">
+    <a href="{{ latest_post.get_absolute_url }}">
+      <img itemprop="image" class="post_image" src="{% if latest_post.image %} {{latest_post.image.url}} {% else %} /media/pictures/ttlogo.png {% endif %}">
+      <div class="post_heading">
+        <div class="heading_text">
+          <div class="category">
+            {{ latest_post.category }}
+          </div>
+          <div class="post_title">
+            {{ latest_post.title }}
+          </div>
+          <div class="date_posted">
+            {{ latest_post.posted }}
           </div>
         </div>
-      </a>
-    </td>
+      </div>
+    </a>
+  </div>
 
-    <td class = "post 2nd_post" background={% if second_latest_post.image %} {{second_latest_post.image.url}} {% else %} "/media/pictures/ttlogo.png" {% endif %}>
-      <a href="{{ second_latest_post.get_absolute_url }}">
-        <div class="post_heading">
-          <div class="heading_text">
-            <div class="category">
-              {{ second_latest_post.category }}
-            </div>
-            <div class="post_title">
-              {{ second_latest_post.title }}
-            </div>
-            <div class="date_posted">
-              {{ second_latest_post.posted }}
-            </div>
+  <div class = "post second_post">
+    <a href="{{ second_latest_post.get_absolute_url }}">
+      <img itemprop="image" class="post_image" src="{% if second_latest_post.image %} {{second_latest_post.image.url}} {% else %} /media/pictures/ttlogo.png {% endif %}">
+      <div class="post_heading">
+        <div class="heading_text">
+          <div class="category">
+            {{ second_latest_post.category }}
+          </div>
+          <div class="post_title">
+            {{ second_latest_post.title }}
+          </div>
+          <div class="date_posted">
+            {{ second_latest_post.posted }}
           </div>
         </div>
-      </a>
-    </td>
-  </tr>
-</table>
+      </div>
+    </a>
+  </div>
+  <br style="clear: left;" />
+</div>

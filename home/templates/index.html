@@ -1,26 +1,20 @@
 {% extends 'base.html' %}
 
 {% block style %}
-
 <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="/static/css/index.css">
-
 {% endblock style %}
 
 {% block content %}
-<body class="bg">
-  <div class="square-background">
-    <div class="heading1"> TraumaTank
+<body class="bg square-background">
+  <img class="home_img" src = "/media/pictures/alien_attack.png" alt = "home_image">
+  <div class="personal_info_box">
+     <div class="heading1"> Nicholas Palermo
       <div class="heading2">
         Nicholas Palermo <br> PhD. Candidate of Biological Sciences <br> Honeybee Researcher at FIU <br>  Email: npale005@fiu.edu <br>
         <a class="heading2_a" href="http://pgp.mit.edu/pks/lookup?op=get&search=0xF322981EBE77C190"> PGP public key</a>
       </div>
     </div>
-    <img class="home_img" src = "/media/pictures/alien_attack.png" alt = "home_image">
-
-</p>
-
-</div>
-
+   
 </body>
 {% endblock content %}
